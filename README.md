@@ -122,7 +122,6 @@ for more information about how to generate these.
 ```puppet
 node 'broker1.example.com' {
   class { '::mcollective':
-    middleware         => true,
     middleware_hosts   => [ 'broker1.example.com' ],
     middleware_ssl     => true,
     securityprovider   => 'ssl',
@@ -192,12 +191,6 @@ node.
 
 Boolean: defaults to false.  Whether to install the mcollective client
 application on this node.
-
-##### `middleware`
-
-Boolean: defaults to false.  Whether to install middleware that matches
-`$mcollective::connector` on this node.
-
 
 ##### `activemq_template`
 
@@ -731,6 +724,9 @@ The module has been tested on:
 
 * CentOS 6
 * Ubuntu 12.04
+
+The module is currently under testing on:
+* Ubuntu 14.04
 
 Testing on other platforms has been light and cannot be guaranteed.
 
